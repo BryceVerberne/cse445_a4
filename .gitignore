@@ -1,0 +1,51 @@
+# Build Results
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+*.log
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio working folder
+.vs/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Rider IDE (if you ever switch)
+.idea/
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# ASP.NET (not typically in console apps, but harmless to include)
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# DotCover
+*.dcvr
+
+# StyleCop
+StyleCopReport.xml
+
+# Backup & temp files
+*.bak
+*.tmp
+*.swp
+*~
+
+# Publish output
+publish/
