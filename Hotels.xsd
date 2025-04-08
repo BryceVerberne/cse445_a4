@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-  <!-- root -->
   <xs:element name="Hotels">
     <xs:complexType>
       <xs:sequence>
-
         <xs:element name="Hotel" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
@@ -22,17 +20,17 @@
                     <xs:element name="State"  type="xs:string"/>
                     <xs:element name="Zip"    type="xs:string"/>
                   </xs:sequence>
-
-                  <xs:attribute name="NearestAirport" type="xs:string" use="optional"/>
                 </xs:complexType>
               </xs:element>
 
+              <xs:element name="NearestAirport" type="xs:string" minOccurs="0"/>
+              <xs:element name="Rating" type="xs:decimal" minOccurs="0"/>
             </xs:sequence>
 
-            <xs:attribute name="Rating" type="xs:decimal" use="optional"/>
+            <xs:attribute name="Id" type="xs:string" use="optional"/>
+            <xs:attribute name="Provider" type="xs:string" use="optional"/>
           </xs:complexType>
         </xs:element>
-
       </xs:sequence>
     </xs:complexType>
   </xs:element>
