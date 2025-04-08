@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace ConsoleApp1
 {
-    public class submission
+    public class Program
     {
         // 1. Provide your GitHub URLs here:
         public static string xmlURL = "https://bryceverberne.com/cse445_a4/Hotels.xml";
