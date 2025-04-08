@@ -69,10 +69,12 @@ namespace ConsoleApp1
                 var doc = new XmlDocument();
                 doc.Load(xmlUrl);
 
-                string json = JsonConvert.SerializeXmlNode(doc, Newtonsoft.Json.Formatting.Indented);
-                json = json.Replace("\"@", "\"_");
+                if (doc.FirstChild is XmlDeclaration)
+                    doc.RemoveChild(doc.FirstChild);
 
-                return json;
+                string json = JsonConvert.SerializeXmlNode(doc, Formatting.Indented);
+
+                return json.Replace("\"@", "\"_");
             }
             catch (Exception ex)
             {

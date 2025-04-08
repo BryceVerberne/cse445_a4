@@ -8,8 +8,8 @@
           <xs:complexType>
             <xs:sequence>
 
-              <xs:element name="Name"   type="xs:string"/>
-              <xs:element name="Phone"  type="xs:string" maxOccurs="unbounded"/>
+              <xs:element name="Name"  type="xs:string"/>
+              <xs:element name="Phone" type="xs:string" maxOccurs="unbounded"/>
 
               <xs:element name="Address">
                 <xs:complexType>
@@ -20,15 +20,12 @@
                     <xs:element name="State"  type="xs:string"/>
                     <xs:element name="Zip"    type="xs:string"/>
                   </xs:sequence>
+                  <xs:attribute name="NearestAirport" type="xs:string" use="optional"/>
                 </xs:complexType>
               </xs:element>
 
-              <xs:element name="NearestAirport" type="xs:string" minOccurs="0"/>
-              <xs:element name="Rating" type="xs:decimal" minOccurs="0"/>
             </xs:sequence>
-
-            <xs:attribute name="Id" type="xs:string" use="optional"/>
-            <xs:attribute name="Provider" type="xs:string" use="optional"/>
+            <xs:attribute name="Rating" type="xs:decimal" use="optional"/>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
