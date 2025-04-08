@@ -9,9 +9,9 @@ namespace ConsoleApp1
     public class Program
     {
         // 1. Provide your GitHub URLs here:
-        public static string xmlURL = "https://BryceVerberne.github.io/Hotels.xml";
-        public static string xmlErrorURL = "https://BryceVerberne.github.io/HotelsErrors.xml";
-        public static string xsdURL = "https://BryceVerberne.github.io/Hotels.xsd";
+        public static string xmlURL = "https://bryceverberne.github.io/Hotels.xml";
+        public static string xmlErrorURL = "https://bryceverberne.github.io/HotelsErrors.xml";
+        public static string xsdURL = "https://bryceverberne.github.io/Hotels.xsd";
 
         public static void Main(string[] args)
         {

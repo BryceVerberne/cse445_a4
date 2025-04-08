@@ -1,0 +1,24 @@
+<Hotel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="Hotels.xsd">
+
+  <!-- 2️⃣ remove the required Rating attribute from the first hotel -->
+  <Hotel>
+    <Name>Westin</Name>
+    <!-- 3️⃣ delete one <Phone> line here -->
+    <Phone>480-968-8885</Phone>
+
+    <!-- 4️⃣ break the closing tag on Address -->
+    <Address NearestAirport="Sky Harbor">
+      <Number>11</Number>
+      <Street>E 7th St</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    <!--  ❌  </Address>  missing on purpose -->
+
+    <!-- 5️⃣ give the hotel two <Name> elements -->
+    <Name>Duplicate Name</Name>
+  </Hotel>
+
+  <!-- keep the rest unchanged -->
+</Hotel>
