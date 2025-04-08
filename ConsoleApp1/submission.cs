@@ -6,11 +6,11 @@ using Newtonsoft.Json;
 
 namespace ConsoleApp1
 {
-    public class Program
+    public class submission
     {
         // 1. Provide your GitHub URLs here:
         public static string xmlURL = "https://bryceverberne.com/cse445_a4/Hotels.xml";
-        public static string xmlErrorURL = "https://bryceverberne.com/cse445_a4/HotelsErrors.xml";
+        public static string xmlErrorURL = "https://bryceverberne.com/cse445_a4/HotelErrors.xml";
         public static string xsdURL = "https://bryceverberne.com/cse445_a4/Hotels.xsd";
 
         public static void Main(string[] args)
