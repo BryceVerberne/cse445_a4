@@ -72,7 +72,7 @@ namespace ConsoleApp1
                 if (doc.FirstChild is XmlDeclaration)
                     doc.RemoveChild(doc.FirstChild);
 
-                string json = JsonConvert.SerializeXmlNode(doc, Formatting.Indented);
+                string json = JsonConvert.SerializeXmlNode(doc, Newtonsoft.Json.Formatting.Indented);
 
                 return json.Replace("\"@", "\"_");
             }
