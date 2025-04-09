@@ -1,24 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ❶ Root element name changed from <Hotels> to <Hotel> -->
 <Hotel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="Hotels.xsd">
 
-  <!-- 2️⃣ remove the required Rating attribute from the first hotel -->
+  <!-- ——— 1 ———  (two <Name> elements) ❺ -->
   <Hotel>
     <Name>Westin</Name>
-    <!-- 3️⃣ delete one <Phone> line here -->
+    <Name>Westin Duplicate</Name>  <!-- extra name -->
     <Phone>480-968-8885</Phone>
-
-    <!-- 4️⃣ break the closing tag on Address -->
-    <Address NearestAirport="Sky Harbor">
-      <Number>11</Number>
-      <Street>E 7th St</Street>
-      <City>Tempe</City>
-      <State>AZ</State>
-      <Zip>85281</Zip>
-    <!--  ❌  </Address>  missing on purpose -->
-
-    <!-- 5️⃣ give the hotel two <Name> elements -->
-    <Name>Duplicate Name</Name>
+    <Phone>800-937-8461</Phone>
+    <Address Number="11" Street="E.7th St" City="Tempe" State="AZ" Zip="85281"/>
+    <NearestAirport>Sky Habor</NearestAirport>
+    <Rating>4.2</Rating>
   </Hotel>
 
-  <!-- keep the rest unchanged -->
+  <!-- ——— 2 ———  (missing required Zip attribute) ❷ -->
+  <Hotel>
+    <Name>The Plaza Hotel</Name>
+    <Phone>212-759-3000</Phone>
+    <Phone>800-745-8883</Phone>
+    <!-- Zip attribute removed -->
+    <Address Number="768" Street="5th Ave" City="New York" State="NY"/>
+    <NearestAirport>JFK</NearestAirport>
+    <Rating>4.6</Rating>
+  </Hotel>
+
+  <!-- ——— 3 ———  (no <Phone> element) ❸ -->
+  <Hotel>
+    <Name>Fairmont San Francisco</Name>
+    <!-- phone missing entirely -->
+    <Address Number="950" Street="Mason St" City="San Francisco" State="CA" Zip="94108"/>
+    <NearestAirport>SFO</NearestAirport>
+  </Hotel>
+
+  <!-- ——— 4 ———  (<Address> never closed) ❹ -->
+  <Hotel>
+    <Name>Omni William Penn</Name>
+    <Phone>412-281-7100</Phone>
+    <!-- opening tag only — no /> and no closing </Address> -->
+    <Address Number="530" Street="William Penn Pl" City="Pittsburgh" State="PA" Zip="15219">
+  </Hotel>
+
+  <!-- ——— remaining hotels unchanged ——— -->
+  <Hotel>
+    <Name>Hilton Hawaiian Village</Name>
+    <Phone>808-949-4321</Phone>
+    <Address Number="2005" Street="Kalia Rd" City="Honolulu" State="HI" Zip="96815"/>
+    <NearestAirport>HNL</NearestAirport>
+    <Rating>4.3</Rating>
+  </Hotel>
+
+  <Hotel>
+    <Name>The Broadmoor</Name>
+    <Phone>855-634-7711</Phone>
+    <Phone>719-634-7711</Phone>
+    <Address Number="1" Street="Lake Ave" City="Colorado Springs" State="CO" Zip="80906"/>
+    <NearestAirport>COS</NearestAirport>
+    <Rating>4.7</Rating>
+  </Hotel>
+
+  <Hotel>
+    <Name>Gaylord Opryland Resort</Name>
+    <Phone>615-889-1000</Phone>
+    <Address Number="2800" Street="Opryland Dr" City="Nashville" State="TN" Zip="37214"/>
+    <Rating>4.4</Rating>
+  </Hotel>
+
+  <Hotel>
+    <Name>Hotel del Coronado</Name>
+    <Phone>619-435-6611</Phone>
+    <Address Number="1500" Street="Orange Ave" City="Coronado" State="CA" Zip="92118"/>
+    <NearestAirport>SAN</NearestAirport>
+  </Hotel>
+
+  <Hotel>
+    <Name>Waldorf Astoria Chicago</Name>
+    <Phone>312-646-1300</Phone>
+    <Address Number="11" Street="E Walton St" City="Chicago" State="IL" Zip="60611"/>
+    <Rating>4.6</Rating>
+  </Hotel>
+
+  <Hotel>
+    <Name>The Ritz‑Carlton, Dallas</Name>
+    <Phone>214-922-0200</Phone>
+    <Address Number="2121" Street="McKinney Ave" City="Dallas" State="TX" Zip="75201"/>
+    <NearestAirport>DFW</NearestAirport>
+  </Hotel>
+
+  <Hotel>
+    <Name>The Peabody Memphis</Name>
+    <Phone>901-529-4000</Phone>
+    <Address Number="149" Street="Union Ave" City="Memphis" State="TN" Zip="38103"/>
+    <NearestAirport>MEM</NearestAirport>
+  </Hotel>
+
 </Hotel>
