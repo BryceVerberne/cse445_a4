@@ -34,46 +34,37 @@ namespace ConsoleApp1
         // Verifies an XML conforms to the Hotels.xsd schema
         public static string Verification(string xmlUrl, string xsdUrl)
         {
-            var errors = new List<string>();
-
             try
             {
+                // Load the schema
                 var schemas = new XmlSchemaSet();
                 schemas.Add(null, xsdUrl);
 
                 var settings = new XmlReaderSettings
                 {
                     Schemas = schemas,
-                    ValidationType = ValidationType.Schema,
-                    ValidationFlags = XmlSchemaValidationFlags.ReportValidationWarnings
+                    ValidationType = ValidationType.Schema
                 };
 
+                // Capture any validation errors
+                var errors = new List<string>();
                 settings.ValidationEventHandler += (s, e) =>
                 {
-                    errors.Add(
-                    $"Schema {e.Severity}: {e.Message} " +
-                    $"(Line {e.Exception.LineNumber}, Pos {e.Exception.LinePosition})");
+                    errors.Add($"Line {e.Exception.LineNumber}, Pos {e.Exception.LinePosition}: {e.Message}");
                 };
 
                 using (var reader = XmlReader.Create(xmlUrl, settings))
                 {
-                    while (reader.Read()) { /* keep reading */ }
+                    while (reader.Read()) {} // Read through the XML
                 }
-            }
-            catch (XmlException xe)          // well‑formedness problems
-            {
-                errors.Add(
-                $"XML well‑formedness error: {xe.Message} " +
-                $"(Line {xe.LineNumber}, Pos {xe.LinePosition})");
-            }
-            catch (Exception ex)             // network, I/O, etc.
-            {
-                errors.Add($"Exception: {ex.Message}");
-            }
 
-            return errors.Count == 0
-                ? "No Error"
-                : string.Join(Environment.NewLine, errors);
+                return (errors.Count == 0) ? "No Error" 
+                                           : string.Join(Environment.NewLine, errors);
+            }
+            catch (Exception ex) // Catch runtime exceptions
+            {
+                return $"Exception: {ex.Message}";
+            }
         }
 
         // Converts an XML document to a formatted JSON string
