@@ -2,110 +2,126 @@
 <Hotels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="Hotels.xsd">
 
-  <Hotel Id="H1" Provider="Marriott">
+  <Hotel Rating="4.2">
     <Name>Westin Tempe</Name>
     <Phone>480-968-8885</Phone>
     <Phone>800-937-8461</Phone>
     <Address>
-      <Number>11</Number><Street>E 7th St</Street>
-      <City>Tempe</City><State>AZ</State><Zip>85281</Zip>
+      <Number>11</Number>
+      <Street>E 7th St</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
     </Address>
-    <NearestAirport>Sky Harbor</NearestAirport>
     <Rating>4.2</Rating>
   </Hotel>
 
-  <Hotel Id="H2">
+  <Hotel>
     <Name>Sheraton Phoenix Downtown</Name>
     <Phone>602-262-2500</Phone>
-    <Address>
-      <Number>340</Number><Street>N 3rd St</Street>
-      <City>Phoenix</City><State>AZ</State><Zip>85004</Zip>
+    <Address NearestAirport="Sky Harbor">
+      <Number>340</Number>
+      <Street>N 3rd St</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85004</Zip>
     </Address>
-    <NearestAirport>Sky Harbor</NearestAirport>
   </Hotel>
 
-  <Hotel Id="H3" Provider="Hilton">
+  <Hotel Rating="4.0">
     <Name>Hilton Phoenix Resort at the Peak</Name>
     <Phone>602-997-2626</Phone>
-    <Address>
-      <Number>7677</Number><Street>N 16th St</Street>
-      <City>Phoenix</City><State>AZ</State><Zip>85020</Zip>
+    <Address NearestAirport="Sky Harbor">
+      <Number>7677</Number>
+      <Street>N 16th St</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85020</Zip>
     </Address>
-    <NearestAirport>Sky Harbor</NearestAirport>
-    <Rating>4.0</Rating>
   </Hotel>
 
-  <Hotel Id="H4">
+  <Hotel>
     <Name>Hyatt Regency Phoenix</Name>
     <Phone>602-252-1234</Phone>
-    <Address>
-      <Number>122</Number><Street>N 2nd St</Street>
-      <City>Phoenix</City><State>AZ</State><Zip>85004</Zip>
+    <Address NearestAirport="Sky Harbor">
+      <Number>122</Number>
+      <Street>N 2nd St</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85004</Zip>
     </Address>
-    <NearestAirport>Sky Harbor</NearestAirport>
   </Hotel>
 
-  <Hotel Id="H5" Provider="JW Marriott">
+  <Hotel Rating="4.6">
     <Name>JW Marriott Scottsdale Camelback Inn</Name>
     <Phone>480-948-1700</Phone>
-    <Address>
-      <Number>5402</Number><Street>E Lincoln Dr</Street>
-      <City>Scottsdale</City><State>AZ</State><Zip>85253</Zip>
+    <Address NearestAirport="Sky Harbor">
+      <Number>5402</Number>
+      <Street>E Lincoln Dr</Street>
+      <City>Scottsdale</City>
+      <State>AZ</State>
+      <Zip>85253</Zip>
     </Address>
-    <NearestAirport>Sky Harbor</NearestAirport>
-    <Rating>4.6</Rating>
   </Hotel>
 
-  <Hotel Id="H6">
+  <Hotel Rating="4.7">
     <Name>Four Seasons Resort Scottsdale</Name>
     <Phone>480-515-5700</Phone>
-    <Address>
-      <Number>10600</Number><Street>E Crescent Moon Dr</Street>
-      <City>Scottsdale</City><State>AZ</State><Zip>85262</Zip>
+    <Address NearestAirport="Sky Harbor">
+      <Number>10600</Number>
+      <Street>E Crescent Moon Dr</Street>
+      <City>Scottsdale</City>
+      <State>AZ</State>
+      <Zip>85262</Zip>
     </Address>
-    <NearestAirport>Sky Harbor</NearestAirport>
-    <Rating>4.7</Rating>
   </Hotel>
 
-  <Hotel Id="H7">
+  <Hotel>
     <Name>Renaissance Phoenix Downtown</Name>
     <Phone>602-333-0000</Phone>
     <Address>
-      <Number>100</Number><Street>N 1st St</Street>
-      <City>Phoenix</City><State>AZ</State><Zip>85004</Zip>
+      <Number>100</Number>
+      <Street>N 1st St</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85004</Zip>
     </Address>
-    <NearestAirport>Sky Harbor</NearestAirport>
   </Hotel>
 
-  <Hotel Id="H8" Provider="Hilton">
+  <Hotel>
     <Name>Hampton Inn Chandler</Name>
     <Phone>480-753-5200</Phone>
     <Address>
-      <Number>7333</Number><Street>W Detroit St</Street>
-      <City>Chandler</City><State>AZ</State><Zip>85226</Zip>
+      <Number>7333</Number>
+      <Street>W Detroit St</Street>
+      <City>Chandler</City>
+      <State>AZ</State>
+      <Zip>85226</Zip>
     </Address>
-    <NearestAirport>Sky Harbor</NearestAirport>
   </Hotel>
 
-  <Hotel Id="H9">
+  <Hotel Rating="3.9">
     <Name>Radisson Hotel Phoenix Airport</Name>
     <Phone>602-220-4400</Phone>
     <Address>
-      <Number>427</Number><Street>N 44th St</Street>
-      <City>Phoenix</City><State>AZ</State><Zip>85008</Zip>
+      <Number>427</Number>
+      <Street>N 44th St</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85008</Zip>
     </Address>
-    <NearestAirport>Sky Harbor</NearestAirport>
-    <Rating>3.9</Rating>
   </Hotel>
 
   <Hotel Id="H10" Provider="Marriott">
     <Name>Courtyard by Marriott Tucson</Name>
     <Phone>520-747-0999</Phone>
-    <Address>
-      <Number>2505</Number><Street>E Executive Dr</Street>
-      <City>Tucson</City><State>AZ</State><Zip>85706</Zip>
+    <Address NearestAirport="Tucson International">
+      <Number>2505</Number>
+      <Street>E Executive Dr</Street>
+      <City>Tucson</City>
+      <State>AZ</State>
+      <Zip>85706</Zip>
     </Address>
-    <NearestAirport>Tucson International</NearestAirport>
   </Hotel>
 
 </Hotels>
