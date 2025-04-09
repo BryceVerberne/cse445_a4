@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
 
   <xs:element name="Hotels">
     <xs:complexType>
@@ -20,7 +22,7 @@
                     <xs:element name="State"  type="xs:string"/>
                     <xs:element name="Zip"    type="xs:string"/>
                   </xs:sequence>
-                  <xs:attribute name="NearestAirport" type="xs:string"/>
+                  <xs:attribute name="NearestAirport" type="xs:string" use="optional"/>
                 </xs:complexType>
               </xs:element>
 
