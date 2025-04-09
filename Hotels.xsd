@@ -5,14 +5,14 @@
            elementFormDefault="qualified"
            attributeFormDefault="unqualified">
 
-  <!-- phone must look like 480-123-4567 -->
+  <!-- Phone Structure (enforces 000-000-0000 structure) -->
   <xs:simpleType name="phoneType">
     <xs:restriction base="xs:string">
       <xs:pattern value="\d{3}-\d{3}-\d{4}"/>
     </xs:restriction>
   </xs:simpleType>
 
-  <!-- <Address …/> element with 5 required attributes -->
+  <!-- Address Structure -->
   <xs:complexType name="AddressType">
     <xs:attribute name="Number" type="xs:string" use="required"/>
     <xs:attribute name="Street" type="xs:string" use="required"/>
@@ -21,7 +21,7 @@
     <xs:attribute name="Zip"    type="xs:string" use="required"/>
   </xs:complexType>
 
-  <!-- document root -->
+  <!-- Document Root -->
   <xs:element name="Hotels">
     <xs:complexType>
       <xs:sequence>
@@ -32,7 +32,7 @@
               <xs:element name="Address" type="AddressType"/>
             </xs:sequence>
 
-            <!-- Hotel‑level attributes -->
+            <!-- Hotel Attributes -->
             <xs:attribute name="Name"            type="xs:string" use="required"/>
             <xs:attribute name="Rating"          type="xs:float"  use="optional"/>
             <xs:attribute name="NearestAirport"  type="xs:string" use="optional"/>
