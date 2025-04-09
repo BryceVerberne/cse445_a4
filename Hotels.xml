@@ -6,7 +6,7 @@
     <Name>Westin Tempe</Name>
     <Phone>480-968-8885</Phone>
     <Phone>800-937-8461</Phone>
-    <Address>
+    <Address NearestAirport="Sky Harbor">
       <Number>11</Number>
       <Street>E 7th St</Street>
       <City>Tempe</City>
@@ -78,7 +78,7 @@
   <Hotel>
     <Name>Renaissance Phoenix Downtown</Name>
     <Phone>602-333-0000</Phone>
-    <Address>
+    <Address NearestAirport="Sky Harbor">
       <Number>100</Number>
       <Street>N 1st St</Street>
       <City>Phoenix</City>
@@ -90,7 +90,7 @@
   <Hotel>
     <Name>Hampton Inn Chandler</Name>
     <Phone>480-753-5200</Phone>
-    <Address>
+    <Address NearestAirport="Sky Harbor">
       <Number>7333</Number>
       <Street>W Detroit St</Street>
       <City>Chandler</City>
@@ -102,7 +102,7 @@
   <Hotel Rating="3.9">
     <Name>Radisson Hotel Phoenix Airport</Name>
     <Phone>602-220-4400</Phone>
-    <Address>
+    <Address NearestAirport="Sky Harbor">
       <Number>427</Number>
       <Street>N 44th St</Street>
       <City>Phoenix</City>
