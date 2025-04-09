@@ -31,28 +31,26 @@ namespace ConsoleApp1
             Console.WriteLine(result);
         }
 
-        // Verifies an XML file against its XSD and reports *all* problems found
+        // Verify XML files against the Hotel.xsd schema
         public static string Verification(string xmlUrl, string xsdUrl)
         {
-            // Collect errors from both the schema validator and the XML parser
             var errors = new List<string>();
 
             try
             {
-                // 1.  Load the schema
+                // Load the schema
                 var schemas = new XmlSchemaSet();
                 schemas.Add(null, xsdUrl);
 
-                // 2.  Configure the validating reader
+                // Configure reader
                 var settings = new XmlReaderSettings
                 {
-                    Schemas         = schemas,
-                    ValidationType  = ValidationType.Schema,
-                    // also surface warnings (e.g., pattern‑facet mismatches)
+                    Schemas = schemas,
+                    ValidationType = ValidationType.Schema,
                     ValidationFlags = XmlSchemaValidationFlags.ReportValidationWarnings
                 };
 
-                // 3.  Capture *schema* validation errors & warnings
+                // Catch schema errors
                 settings.ValidationEventHandler += (s, e) =>
                 {
                     errors.Add(
@@ -60,24 +58,24 @@ namespace ConsoleApp1
                         $"Pos {e.Exception.LinePosition}: {e.Message}");
                 };
 
-                // 4.  Stream through the document
+                // Read through the document
                 using (var reader = XmlReader.Create(xmlUrl, settings))
                 {
-                    while (reader.Read()) { /* just advance the cursor */ }
+                    while (reader.Read()) {}
                 }
             }
-            catch (XmlException xe)            // XML is not well‑formed
+            catch (XmlException xe) // Catch well-formedness errors
             {
                 errors.Add(
                     $"XML well‑formedness error: Line {xe.LineNumber}, " +
                     $"Pos {xe.LinePosition}: {xe.Message}");
             }
-            catch (Exception ex)               // network, I/O, etc.
+            catch (Exception ex) // Catch every other error
             {
                 errors.Add($"Exception: {ex.Message}");
             }
 
-            // 5.  Return either “No Error” or a list of all problems
+            // Print out all errors if present
             return errors.Count == 0
                 ? "No Error"
                 : string.Join(Environment.NewLine, errors);
