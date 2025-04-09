@@ -3,15 +3,20 @@
            elementFormDefault="qualified"
            attributeFormDefault="unqualified">
 
+  <xs:simpleType name="phoneType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{3}-\d{3}-\d{4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
   <xs:element name="Hotels">
     <xs:complexType>
       <xs:sequence>
         <xs:element name="Hotel" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-
-              <xs:element name="Name"  type="xs:string"/>
-              <xs:element name="Phone" type="xs:string" maxOccurs="unbounded"/>
+              <xs:element name="Name" type="xs:string"/>
+              <xs:element name="Phone" type="phoneType" maxOccurs="unbounded"/>
 
               <xs:element name="Address">
                 <xs:complexType>
@@ -22,12 +27,13 @@
                     <xs:element name="State"  type="xs:string"/>
                     <xs:element name="Zip"    type="xs:string"/>
                   </xs:sequence>
-                  <xs:attribute name="NearestAirport" type="xs:string" use="optional"/>
                 </xs:complexType>
               </xs:element>
 
+              <!-- *** these two are ELEMENTS, not attributes *** -->
+              <xs:element name="NearestAirport" type="xs:string" minOccurs="0"/>
+              <xs:element name="Rating"         type="xs:decimal" minOccurs="0"/>
             </xs:sequence>
-            <xs:attribute name="Rating" type="xs:decimal" use="optional"/>
           </xs:complexType>
         </xs:element>
       </xs:sequence>

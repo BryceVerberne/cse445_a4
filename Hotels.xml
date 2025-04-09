@@ -2,42 +2,47 @@
 <Hotels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="Hotels.xsd">
 
-  <Hotel Rating="4.2">
+  <Hotel>
     <Name>Westin</Name>
     <Phone>480-968-8885</Phone>
     <Phone>800-937-8461</Phone>
-    <Address NearestAirport="Sky Habor">
+    <Address>
       <Number>11</Number>
       <Street>E.7th St</Street>
       <City>Tempe</City>
       <State>AZ</State>
       <Zip>85281</Zip>
     </Address>
+    <NearestAirport>Sky Habor</NearestAirport>
+    <Rating>4.2</Rating>
   </Hotel>
 
-  <Hotel Rating="4.6">
+  <Hotel>
     <Name>The Plaza Hotel</Name>
     <Phone>212-759-3000</Phone>
     <Phone>800-745-8883</Phone>
-    <Address NearestAirport="JFK">
+    <Address>
       <Number>768</Number>
       <Street>5th Ave</Street>
       <City>New York</City>
       <State>NY</State>
       <Zip>10019</Zip>
     </Address>
+    <NearestAirport>JFK</NearestAirport>
+    <Rating>4.6</Rating>
   </Hotel>
 
   <Hotel>
     <Name>Fairmont San Francisco</Name>
     <Phone>415-772-5000</Phone>
-    <Address NearestAirport="SFO">
+    <Address>
       <Number>950</Number>
       <Street>Mason St</Street>
       <City>San Francisco</City>
       <State>CA</State>
       <Zip>94108</Zip>
     </Address>
+    <NearestAirport>SFO</NearestAirport>
   </Hotel>
 
   <Hotel>
@@ -52,32 +57,36 @@
     </Address>
   </Hotel>
 
-  <Hotel Rating="4.3">
+  <Hotel>
     <Name>Hilton Hawaiian Village</Name>
     <Phone>808-949-4321</Phone>
-    <Address NearestAirport="HNL">
+    <Address>
       <Number>2005</Number>
       <Street>Kalia Rd</Street>
       <City>Honolulu</City>
       <State>HI</State>
       <Zip>96815</Zip>
     </Address>
+    <NearestAirport>HNL</NearestAirport>
+    <Rating>4.3</Rating>
   </Hotel>
 
-  <Hotel Rating="4.7">
+  <Hotel>
     <Name>The Broadmoor</Name>
     <Phone>855-634-7711</Phone>
     <Phone>719-634-7711</Phone>
-    <Address NearestAirport="COS">
+    <Address>
       <Number>1</Number>
       <Street>Lake Ave</Street>
       <City>Colorado Springs</City>
       <State>CO</State>
       <Zip>80906</Zip>
     </Address>
+    <NearestAirport>COS</NearestAirport>
+    <Rating>4.7</Rating>
   </Hotel>
 
-  <Hotel Rating="4.4">
+  <Hotel>
     <Name>Gaylord Opryland Resort</Name>
     <Phone>615-889-1000</Phone>
     <Address>
@@ -87,21 +96,23 @@
       <State>TN</State>
       <Zip>37214</Zip>
     </Address>
+    <Rating>4.4</Rating>
   </Hotel>
 
   <Hotel>
     <Name>Hotel del Coronado</Name>
     <Phone>619-435-6611</Phone>
-    <Address NearestAirport="SAN">
+    <Address>
       <Number>1500</Number>
       <Street>Orange Ave</Street>
       <City>Coronado</City>
       <State>CA</State>
       <Zip>92118</Zip>
     </Address>
+    <NearestAirport>SAN</NearestAirport>
   </Hotel>
 
-  <Hotel Rating="4.6">
+  <Hotel>
     <Name>Waldorf Astoria Chicago</Name>
     <Phone>312-646-1300</Phone>
     <Address>
@@ -111,30 +122,33 @@
       <State>IL</State>
       <Zip>60611</Zip>
     </Address>
+    <Rating>4.6</Rating>
   </Hotel>
 
   <Hotel>
     <Name>The Ritz‑Carlton, Dallas</Name>
     <Phone>214-922-0200</Phone>
-    <Address NearestAirport="DFW">
+    <Address>
       <Number>2121</Number>
       <Street>McKinney Ave</Street>
       <City>Dallas</City>
       <State>TX</State>
       <Zip>75201</Zip>
     </Address>
+    <NearestAirport>DFW</NearestAirport>
   </Hotel>
 
   <Hotel>
     <Name>The Peabody Memphis</Name>
     <Phone>901-529-4000</Phone>
-    <Address NearestAirport="MEM">
+    <Address>
       <Number>149</Number>
       <Street>Union Ave</Street>
       <City>Memphis</City>
       <State>TN</State>
       <Zip>38103</Zip>
     </Address>
+    <NearestAirport>MEM</NearestAirport>
   </Hotel>
 
 </Hotels>
