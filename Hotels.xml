@@ -1,88 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Hotels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="Hotels.xsd">
+<Hotels xmlns="http://www.example.com/hotels"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.example.com/hotels Hotels.xsd">
 
-  <Hotel>
-    <Name>Westin</Name>
+  <Hotel Name="Westin" Rating="4.2" NearestAirport="Sky Habor">
     <Phone>480-968-8885</Phone>
     <Phone>800-937-8461</Phone>
     <Address Number="11" Street="E.7th St" City="Tempe" State="AZ" Zip="85281"/>
-    <NearestAirport>Sky Habor</NearestAirport>
-    <Rating>4.2</Rating>
   </Hotel>
 
-  <Hotel>
-    <Name>The Plaza Hotel</Name>
+  <Hotel Name="The Plaza Hotel" Rating="4.6" NearestAirport="JFK">
     <Phone>212-759-3000</Phone>
     <Phone>800-745-8883</Phone>
     <Address Number="768" Street="5th Ave" City="New York" State="NY" Zip="10019"/>
-    <NearestAirport>JFK</NearestAirport>
-    <Rating>4.6</Rating>
   </Hotel>
 
-  <Hotel>
-    <Name>Fairmont San Francisco</Name>
+  <Hotel Name="Fairmont San Francisco" NearestAirport="SFO">
     <Phone>415-772-5000</Phone>
     <Address Number="950" Street="Mason St" City="San Francisco" State="CA" Zip="94108"/>
-    <NearestAirport>SFO</NearestAirport>
   </Hotel>
 
-  <Hotel>
-    <Name>Omni William Penn</Name>
+  <Hotel Name="Omni William Penn">
     <Phone>412-281-7100</Phone>
     <Address Number="530" Street="William Penn Pl" City="Pittsburgh" State="PA" Zip="15219"/>
   </Hotel>
 
-  <Hotel>
-    <Name>Hilton Hawaiian Village</Name>
+  <Hotel Name="Hilton Hawaiian Village" Rating="4.3" NearestAirport="HNL">
     <Phone>808-949-4321</Phone>
     <Address Number="2005" Street="Kalia Rd" City="Honolulu" State="HI" Zip="96815"/>
-    <NearestAirport>HNL</NearestAirport>
-    <Rating>4.3</Rating>
   </Hotel>
 
-  <Hotel>
-    <Name>The Broadmoor</Name>
+  <Hotel Name="The Broadmoor" Rating="4.7" NearestAirport="COS">
     <Phone>855-634-7711</Phone>
     <Phone>719-634-7711</Phone>
     <Address Number="1" Street="Lake Ave" City="Colorado Springs" State="CO" Zip="80906"/>
-    <NearestAirport>COS</NearestAirport>
-    <Rating>4.7</Rating>
   </Hotel>
 
-  <Hotel>
-    <Name>Gaylord Opryland Resort</Name>
+  <Hotel Name="Gaylord Opryland Resort" Rating="4.4">
     <Phone>615-889-1000</Phone>
     <Address Number="2800" Street="Opryland Dr" City="Nashville" State="TN" Zip="37214"/>
-    <Rating>4.4</Rating>
   </Hotel>
 
-  <Hotel>
-    <Name>Hotel del Coronado</Name>
+  <Hotel Name="Hotel del Coronado" NearestAirport="SAN">
     <Phone>619-435-6611</Phone>
     <Address Number="1500" Street="Orange Ave" City="Coronado" State="CA" Zip="92118"/>
-    <NearestAirport>SAN</NearestAirport>
   </Hotel>
 
-  <Hotel>
-    <Name>Waldorf Astoria Chicago</Name>
+  <Hotel Name="Waldorf Astoria Chicago" Rating="4.6">
     <Phone>312-646-1300</Phone>
     <Address Number="11" Street="E Walton St" City="Chicago" State="IL" Zip="60611"/>
-    <Rating>4.6</Rating>
   </Hotel>
 
-  <Hotel>
-    <Name>The Ritz‑Carlton, Dallas</Name>
+  <Hotel Name="The Ritz‑Carlton, Dallas" NearestAirport="DFW">
     <Phone>214-922-0200</Phone>
     <Address Number="2121" Street="McKinney Ave" City="Dallas" State="TX" Zip="75201"/>
-    <NearestAirport>DFW</NearestAirport>
   </Hotel>
 
-  <Hotel>
-    <Name>The Peabody Memphis</Name>
+  <Hotel Name="The Peabody Memphis" NearestAirport="MEM">
     <Phone>901-529-4000</Phone>
     <Address Number="149" Street="Union Ave" City="Memphis" State="TN" Zip="38103"/>
-    <NearestAirport>MEM</NearestAirport>
   </Hotel>
 
 </Hotels>
