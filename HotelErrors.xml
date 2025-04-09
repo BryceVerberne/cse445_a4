@@ -26,7 +26,6 @@
     <!-- Hotel 4 (<Address> never closed) -->
     <Hotel Name="Omni William Penn">
         <Phone>412-281-7100</Phone>
-        <!-- opening tag only — no /> and no closing </Address> -->
         <Address Number="530" Street="William Penn Pl" City="Pittsburgh" State="PA" Zip="15219">
     </Hotel>
 
