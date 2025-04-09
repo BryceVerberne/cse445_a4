@@ -31,40 +31,56 @@ namespace ConsoleApp1
             Console.WriteLine(result);
         }
 
-        // Verifies an XML conforms to the Hotels.xsd schema
+        // Verifies an XML file against its XSD and reports *all* problems found
         public static string Verification(string xmlUrl, string xsdUrl)
         {
+            // Collect errors from both the schema validator and the XML parser
+            var errors = new List<string>();
+
             try
             {
-                // Load the schema
+                // 1.  Load the schema
                 var schemas = new XmlSchemaSet();
                 schemas.Add(null, xsdUrl);
 
+                // 2.  Configure the validating reader
                 var settings = new XmlReaderSettings
                 {
-                    Schemas = schemas,
-                    ValidationType = ValidationType.Schema
+                    Schemas         = schemas,
+                    ValidationType  = ValidationType.Schema,
+                    // also surface warnings (e.g., pattern‑facet mismatches)
+                    ValidationFlags = XmlSchemaValidationFlags.ReportValidationWarnings
                 };
 
-                // Capture any validation errors
-                var errors = new List<string>();
+                // 3.  Capture *schema* validation errors & warnings
                 settings.ValidationEventHandler += (s, e) =>
                 {
-                    errors.Add($"Line {e.Exception.LineNumber}, Pos {e.Exception.LinePosition}: {e.Message}");
+                    errors.Add(
+                        $"Schema {e.Severity}: Line {e.Exception.LineNumber}, " +
+                        $"Pos {e.Exception.LinePosition}: {e.Message}");
                 };
 
+                // 4.  Stream through the document
                 using (var reader = XmlReader.Create(xmlUrl, settings))
                 {
-                    while (reader.Read()) {} // Read through the XML
+                    while (reader.Read()) { /* just advance the cursor */ }
                 }
-
-                return (errors.Count == 0) ? "No Error" 
-                                           : string.Join(Environment.NewLine, errors);
             }
-            catch (Exception ex) // Catch runtime exceptions
+            catch (XmlException xe)            // XML is not well‑formed
             {
-                return $"Exception: {ex.Message}";
+                errors.Add(
+                    $"XML well‑formedness error: Line {xe.LineNumber}, " +
+                    $"Pos {xe.LinePosition}: {xe.Message}");
             }
+            catch (Exception ex)               // network, I/O, etc.
+            {
+                errors.Add($"Exception: {ex.Message}");
+            }
+
+            // 5.  Return either “No Error” or a list of all problems
+            return errors.Count == 0
+                ? "No Error"
+                : string.Join(Environment.NewLine, errors);
         }
 
         // Converts an XML document to a formatted JSON string
