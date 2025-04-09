@@ -1,4 +1,7 @@
-﻿using System;
+﻿// © 2025 Bryce Verberne – CSE 445 Assignment 4
+// Sharing or re‑using this code without attribution violates ASU academic‑integrity policy.
+
+using System;
 using System.Collections.Generic;
 using System.Xml;
 using System.Xml.Schema;
