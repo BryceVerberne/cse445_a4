@@ -5,8 +5,7 @@
        xsi:schemaLocation="http://www.example.com/hotels Hotels.xsd">
 
     <!-- Hotel 1  (two names) -->
-    <Hotel Name="Westin" Rating="4.2" NearestAirport="Sky Habor">
-        <Name>Westin Duplicate</Name>
+    <Hotel Name="Westin" Name="Westin Duplicate" Rating="4.2" NearestAirport="Sky Habor">
         <Phone>480-968-8885</Phone>
         <Phone>800-937-8461</Phone>
         <Address Number="11" Street="E.7th St" City="Tempe" State="AZ" Zip="85281"/>
