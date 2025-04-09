@@ -13,7 +13,6 @@
       <State>AZ</State>
       <Zip>85281</Zip>
     </Address>
-    <Rating>4.2</Rating>
   </Hotel>
 
   <Hotel>
@@ -112,7 +111,7 @@
     </Address>
   </Hotel>
 
-  <Hotel Id="H10" Provider="Marriott">
+  <Hotel>
     <Name>Courtyard by Marriott Tucson</Name>
     <Phone>520-747-0999</Phone>
     <Address NearestAirport="Tucson International">
