@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Root element name is Hotel instead of Hotels -->
-<Hotels xmlns="http://www.example.com/hotels"
+<Hotel xmlns="http://www.example.com/hotels"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.example.com/hotels Hotels.xsd">
 
