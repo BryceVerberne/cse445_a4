@@ -79,7 +79,7 @@ namespace ConsoleApp1
 
                 string json = JsonConvert.SerializeXmlNode(doc, Newtonsoft.Json.Formatting.Indented);
 
-                return json.Replace("\"@", "\"_");
+                return json.Replace("\"@", "\"");
             }
             catch (Exception ex)
             {
