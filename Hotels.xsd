@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.example.com/hotels"
+           xmlns="http://www.example.com/hotels"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified">
 
