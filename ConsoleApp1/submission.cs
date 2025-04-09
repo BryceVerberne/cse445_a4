@@ -69,8 +69,13 @@ namespace ConsoleApp1
                 var doc = new XmlDocument();
                 doc.Load(xmlUrl);
 
-                if (doc.FirstChild is XmlDeclaration)
-                    doc.RemoveChild(doc.FirstChild);
+                if (doc.FirstChild is XmlDeclaration dec) doc.RemoveChild(dec);
+
+                if (doc.DocumentElement != null)
+                {
+                    doc.DocumentElement.RemoveAttribute("xmlns:xsi");
+                    doc.DocumentElement.RemoveAttribute("xsi:noNamespaceSchemaLocation");
+                }
 
                 string json = JsonConvert.SerializeXmlNode(doc, Newtonsoft.Json.Formatting.Indented);
 
